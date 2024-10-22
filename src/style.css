@@ -29,6 +29,8 @@ body {
   justify-content: center;
   background-color: var(--light);
   color: var(--dark);
+  transition: 0.1s all;
+  font-family: "Poppins", sans-serif;
 }
 
 main {
@@ -68,11 +70,13 @@ header img {
 
 h1 {
   font-size: 1.5rem;
+  font-weight: 400;
 }
 
 header input {
-  width: 30%;
+  width: 40%;
   text-align: center;
+  font-family: inherit;
 }
 
 .themeBtn {
@@ -85,7 +89,7 @@ header input {
   transform: scale(1.1) rotate(10deg);
 }
 
-button {
+header button {
   border: 1px solid var(--dark);
   padding: 3px;
   height: 20px;
@@ -96,14 +100,15 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--light);
 }
 
-button:hover {
+header button:hover {
   background: var(--celeste);
   transform: scale(1.1);
 }
 
-button img {
+header button img {
   width: 100%;
 }
 
@@ -111,4 +116,40 @@ button img {
 body.dark-mode {
   background-color: var(--dark);
   color: var(--light);
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    gap: 30px;
+    padding-right: 60px;
+  }
+  header img {
+    width: 60px;
+  }
+
+  header h1 {
+    font-size: 2.2em;
+    margin-right: auto;
+  }
+
+  header input {
+    width: 150px;
+    padding: 5px 0;
+    border-radius: 5px;
+    border: 1px solid var(--dark);
+  }
+
+  header button img {
+    width: 100%;
+  }
+
+  header button {
+    width: 28px;
+    height: 28px;
+    padding: 4px;
+  }
+
+  .themeBtn {
+    width: 28px;
+  }
 }
