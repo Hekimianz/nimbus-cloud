@@ -58,7 +58,6 @@ export const renderData = function (data) {
     f: days.map((day) => day.temp),
     c: days.map((day) => ((5 / 9) * (day.temp - 32)).toFixed(1)),
   };
-  console.log(data);
 
   // Render forecasts
   forecasts.innerHTML = "";
