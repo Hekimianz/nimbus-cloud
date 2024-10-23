@@ -253,7 +253,6 @@ header button img {
 /* theme switch */
 body.dark-mode {
   background-color: var(--dark);
-  color: var(--light);
 }
 
 input.dark-mode {
@@ -263,6 +262,7 @@ input.dark-mode {
 
 header.dark-mode {
   box-shadow: rgba(0, 0, 0, 0.7) 0px 3px 8px;
+  color: var(--light);
 }
 
 .main-weather.dark-mode,
@@ -308,6 +308,70 @@ header.dark-mode {
 
   .themeBtn {
     width: 28px;
+  }
+  .main-weather {
+    max-width: 500px;
+  }
+
+  .main-weather h2 {
+    font-size: 2.8em;
+  }
+
+  .main-weather span.weather-time {
+    font-size: 2em;
+  }
+
+  .main-weather i {
+    width: 100px;
+    height: 100px;
+    font-size: 5.5em;
+  }
+
+  .main-weather p.weather-temp {
+    font-size: 2.4em;
+  }
+
+  .main-weather p.weather-desc {
+    font-size: 1.5em;
+  }
+
+  .main-weather span.switch-deg {
+    font-size: 1.4em;
+  }
+
+  .forecasts {
+    max-width: 500px;
+  }
+
+  .forecast {
+    width: 200px;
+    height: 200px;
+  }
+
+  .forecast h3 {
+    font-size: 2.2em;
+  }
+
+  .forecast i {
+    width: 80px;
+    height: 80px;
+    font-size: 4em;
+  }
+
+  .forecast span {
+    font-size: 1.7em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .forecasts {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    max-width: 80%;
+    margin-top: 100px;
+  }
+
+  .forecast:last-of-type {
+    grid-column: 5 / 6;
   }
 }
 
